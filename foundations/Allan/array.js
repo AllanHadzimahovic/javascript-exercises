@@ -37,7 +37,7 @@ function addSum (total, currentItem){
 
 const returnSum = arrayMultiplied.reduce(addSum, 0);
 console.log(returnSum);
-*/
+
 
 const numbers = [1, 2, 3, 4, 5];
 
@@ -45,3 +45,30 @@ const returnSum = numbers.filter(num => num%2 === 0).
                             map(num => num*3).
                             reduce((totala, currentItem) => totala + currentItem);
 console.log(returnSum);
+
+
+
+let names = 'background-color';
+
+let arraySplitted = names.split('-');
+
+let namesFixed = arraySplitted.map((value, index) => index == 0 ? value : value[0].toUpperCase() + value.slice(1)).join('');
+
+console.log(namesFixed);
+
+
+function filterRanger(arr, a, b){
+    const filteredArray = arr.filter(num => (num >=a || num <= b));
+    console.log(filteredArray);
+}
+
+filterRanger([1, 2, 3, 4, 5, 6, 7], 6, 2)
+
+*/
+
+let arr = [5, 2, 1, -10, 8];
+
+arr.sort(function(a,b){return b-a});
+arr.sort((a,b) => b-a);
+
+console.log(arr); // 8, 5, 2, 1, -10
